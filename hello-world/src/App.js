@@ -5,7 +5,7 @@ import Welcome from "./components/welcome";
 import Hello from "./components/hello";
 import Message from "./components/Message";
 import { Component, PureComponent } from "react";
-import Counter from "./components/counter";
+// import Counter from "./components/counter";
 import FunctionClick from "./components/functionClick";
 import ClassClick from "./components/classClick";
 import EvendBind from "./components/evendBind";
@@ -30,12 +30,35 @@ import Hero from "./components/Hero";
 import ErrorBoundary from "./components/ErrorBoundary";
 import ClickCounter from "./components/ClickCounter";
 import HoverCounter from "./components/HoverCounter";
+import ClickCounterTwo from "./ClickCounterTwo";
+import HoverCounterTwo from "./HoverCounterTwo";
+import User from "./User";
+import Counter from "./Counter";
+import ComponentC from "./components/ComponentC";
+import { UserProvider } from "./components/userContext";
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <ClickCounter/>
-        <HoverCounter/>
+        <UserProvider value="Vishwas">
+          <ComponentC />
+        </UserProvider>
+        {/* <Counter>
+        {(count,incrementCount)=>(
+          <ClickCounterTwo count={count} incrementCount={incrementCount}/>
+        )}
+        </Counter>
+        
+        <Counter>
+        {(count,incrementCount)=>(
+          <HoverCounterTwo count={count} incrementCount={incrementCount}/>
+        )}
+        </Counter> */}
+        {/* <ClickCounterTwo/>
+        <HoverCounterTwo/>
+        <User render={(isLoggedIn)=>isLoggedIn?'Vishwas':'Guest'}/> */}
+        {/* <ClickCounter name='Vishwas'/>
+        <HoverCounter/> */}
         {/* <ErrorBoundary>
           <Hero heroName="Batman"></Hero>
         </ErrorBoundary>

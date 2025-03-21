@@ -423,5 +423,161 @@ dfsdfsd
   eg:: const IroanMan=withSuit(TonyStark)
   
 
+  Render props
 
+  the term "render prop" refers to a technique for sharing code bewtween react compoents using a prop whose value is a function.
+
+  ////Context/////
+
+  context provides a wa to pass data through the compeonent tree without having to passs props down manually at every level.
+
+  Context steps
+
+  1.Create the context
+  2.Provide a context value
+  3.consume the context value
+
+
+  React and HTTP
+
+  What are hooks?
+
+  hooks are a new feature additon in REact version 16.8 which allow you to use React features without having to 
+  write a class.
+
+  Ex:State of a component
+
+  Hooks don't work inside classes
+
+  Why hooks?
+
+  reseon set 1
+
+  understand how this keyword works in javaScript
+   remember to bind event handlers in class components
+   classes don't minify very well and make hot reloading very unreliable
+
+  reason set 2
+
+  There is no particular way to reuse staeful component logic 
+  HOC and render props patterns do address this problem
+  maeks the cod eharder to follow
+  There is need a to share stateful logic in a better way
+
+  reason set 3
+
+  create componets for complex scenarios such a date fetching and subscribing to events related code is not organized in one place
+
+
+  ex: Data fetching - in componentDidMount and componentDidUpdate
+  ex:Event listeneres - in componentDidMount and componentWillUnmount
+
+  Because of stateful logic- Cannot break components into smaller ones
+  
+
+  NOteWorthy POints
+
+  REact version 16.8 or higher
+  completely opt in
+  Hooks don't contain any breaking changes and the release in 100% backwards-compatible.
+  classes won't be removed from react 
+  cant use hooks inside of a class component
+  hooks don't replace your existing knowledge of React concepts
+  instead,hooks provide a more direct API to the React concepts you already know
+
+  Summary 
+  hooks are a new feature addition in React version 16.8
+  they allow you to use React features without having to write a class
+  Avoid the whole confusion with 'this' keyword 
+  Allow you to re use stateful logic
+  organize the logic inside a component inoto reusable isolated units
+
+
+  Rules of Hooks
+
+  "only call hooks inside loops, conditions, or nested functions"
+
+  "Only call Hooks from React Functions "
+
+   Call them from within React functional components and not just any regular javaScript function
+
+
+
+   Summary -useState
+
+   the useState hook lets you add state to functional components
+   In classes, the state is always an object.
+   With the useState hook, the state doesn't have to be an object
+   The useState hook return an array with 2 elements
+   The first elements is the current value of the state, and the second elements is a state setter function
+
+   When dealing with objects orarrays, always make sure to spread your state variable and then call the setter function
+
+
+   useEffect
+   
+   The Effect Hook lets you perform side effects in functional components
+   it is a close replacement for componentDidMount,
+   componentDidUpdate and componentWillUnmount
+   
+
+
+   Context
+
+   contxt provides a way to pass data through the component tree without having to pass props down manually at every level.
+
+
+   useRducer
+
+   useRducer is a hook that is user for stat management
+   Is is an alternative to useSTate
+
+  
+        
+
+   Hooks s far
+
+   UseState-state
+   useEffec-side effects
+   useContext-context Api
+   useReducer-reducers
+
+   reduce vs useReducer
+
+   reduce in javaScirpt
+
+   arr.reduce(reducer,initialValue)
+   singleValue=reducer(accumulator,itemValue)
+   reduce method return  single value
+
+   useReducer in react
+
+   useReducer(reducer,initialState)
+   newState=reducer(currentState,action)
+   useREducer Returns a pair of values.
+   [newState,dispatch]
+
+   useReducer Summary
+
+   useReducer is a gook that is used fro state management in React
+   useREducer is related to reducer functions 
+   useReducer(reducer,initialState)
+   reducer(currentState,action)
+
+   useReducer with useContext
+   useReducer-Local state management
+   Share state between components- Blobal state management
+   userReducer + UseContext
+
+
+   useState vs useReducer
+
+   Scenartio             useState                 useReducer
+
+   type of state     Number,String,Boolean        object or Array
+   Number of state    transition One or Two          Too many
+   Related state transitions  No                         yes
+   Business logic             No business logic          Complex business logic
+   Local vs global           local                     Global
+   
 */
